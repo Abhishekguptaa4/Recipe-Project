@@ -1,0 +1,203 @@
+
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navbar styles */
+.navbar { 
+  display: flex;
+  /*justify-content: space-between;*/
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8); /* Transparent background */
+  backdrop-filter: blur(10px); /* Blurred effect */
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Fix the navbar */
+  top: 0; /* Stick it to the top */
+  width: 96%; /* Ensure it spans the full width */
+  z-index: 1000; /* Ensure it stays on top */ 
+
+}
+
+.navbar:hover {
+  background: rgba(0, 0, 0, 1); /* Darker background on hover */
+}
+
+.navbar-logo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #8cfadb;
+}
+
+.navbar-links {
+  display: flex; /* Use flex to align items */
+}
+
+.navbar-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffae00cf;
+  background-color: rgba(255, 215, 0, 0.3);
+  transform: scale(1.1);
+}
+
+
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #1d976c;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+
+/* Hero Section */
+.hero {
+  
+  height: 86vh;
+  background: url("../assets/bg12.png") no-repeat center center;
+  background-size: cover; /* Ensure the image covers the section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  margin: 0; /* Remove any default margin */
+  padding-top: 4rem; /* Adjust for the fixed navbar height */
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: #ffd700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #f0f0f0;
+  line-height: 1.5;
+}
+
+
+/* Featured Recipes */
+.featured-recipes {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 1200px;
+}
+
+.featured-recipes h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.recipe-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Ensure all four cards fit in one row */
+  gap: 1.5rem; /* Space between cards */
+}
+
+.recipe-card {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Blurred background */
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.recipe-card h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.recipe-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.recipe-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ff7e5f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.recipe-card a:hover {
+  background-color: #feb47b;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  font-size: 0.9rem;
+}
+
+
